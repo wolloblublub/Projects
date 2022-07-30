@@ -1,0 +1,53 @@
+import sys
+while True:
+    num1 = int(input("Enter your first whole number: "))
+    num2 = int(input("Enter your second whole number: "))
+    print("\n")
+    print("Please enter the function you would like to use: ")
+    print("+ for Addition")
+    print("- for Subtraction")
+    print("* for Multiplication, ")
+    print("/ for Division")
+		print("^ for Exponents")
+    print("! for Factorial")
+    choice = input(": ")
+    print("\n")
+    if choice in ("+", "A", "a"):
+        def addition(add1, add2):
+            answer = add1 + add2
+            return answer
+        print("\n")
+        print(addition(num1, num2)) 
+    elif choice in ("-", "S", "s"):
+        def subtraction(sub1, sub2):
+            answer = sub1 - sub2
+            return answer
+        print("\n")
+        print(subtraction(num1, num2))
+    elif choice in ("*", "M", "m"):
+        def multiplication(mult1, mult2):
+            answer = mult1 * mult2
+            return answer
+        print("\n")
+        print(multiplication(num1, num2))
+    elif choice in ("/", "D", "d"):
+        def division(divd1, divd2):
+            answer = divd1 / divd2
+            return answer
+        print("\n")
+        print(division(num1, num2))
+    else:
+        print("\n")
+        print("Invalid function: ")
+        continue
+    print("\n")
+    print("Where next: ")
+    print("E to exit")
+    print("L to loop and go again")
+    choice2 = input(": ")
+    if choice2 in ("E", "e"):
+        print("Exiting program:")
+        sys.exit()
+    if choice2 in ("L", "l"):
+        print("\n")
+        continue
