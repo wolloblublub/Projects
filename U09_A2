@@ -1,0 +1,38 @@
+import random
+array = []
+
+class main():
+	
+	def generatefunc():
+		for k in range(0,100):
+			array.append(random.randint(1,500));
+
+	def sortfunc():
+		for i in range(0,100):
+			for j in range(len(array) -1 - i):
+				if array[j]>array[j+1]:
+					array[j],array[j+1]=array[j+1],array[j];
+
+	def filesavefunc():
+		f=open("numbers.csv","w")
+		f.write(str(array)),f.close();
+		
+	def main():
+	 	while True:
+				print(f"1. Generate")
+				print(f"2. Sort")
+				print(f"3. Print")
+				print(f"4. CSV")
+				option = str(input(f": "))
+				if(option == "1"):
+					main.generatefunc()
+				elif(option == "2" and len(array)>3):
+					main.sortfunc()
+				elif(option == "3" and len(array)>3):
+					print(array)
+				elif(option == "4"and len(array)>3):
+					main.filesavefunc()
+				else:
+					print("Error")
+
+main.main()
